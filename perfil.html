@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil - Barbería Don Luis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#0053db",
+                        "secondary-container": "#d5e4f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "outline": "#737686",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary-fixed-dim": "#b9c8db",
+                        "on-secondary-fixed": "#0e1d2b",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "secondary-fixed": "#d5e4f8",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-low": "#eff4ff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#121c2a",
+                        "surface": "#f8f9ff",
+                        "on-background": "#121c2a",
+                        "surface-container-highest": "#d9e3f6",
+                        "surface-container": "#e6eeff",
+                        "on-tertiary-container": "#ffede6",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary-container": "#bc4800",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#00174b",
+                        "primary-container": "#2563eb",
+                        "inverse-primary": "#b4c5ff",
+                        "tertiary": "#943700",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#434655",
+                        "secondary": "#516070",
+                        "primary": "#004ac6",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#27313f",
+                        "on-secondary-container": "#576676",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dee9fc",
+                        "background": "#f8f9ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-dim": "#d0dbed",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#d9e3f6",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#3a4858"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "max-width": "1440px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+        }
+        .custom-toggle:checked + .toggle-dot {
+            transform: translateX(100%);
+            background-color: white;
+        }
+        .custom-toggle:checked ~ .toggle-bg {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto h-16">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-primary">Barbería Don Luis</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Inicio</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="dashboard.html">Dashboard</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="sri.html">SRI</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-all active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-all active:scale-95">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<a href="perfil.html" class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary hover:opacity-80 transition-opacity">
+<img alt="Avatar del barbero" class="w-full h-full object-cover" data-alt="..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRVcCiggx4E-CuA7RW156hOsQik6HHjeWfb4aURdqY1iYFt2SyUjF6bGiVj4sGbH51ibiXR5arGcUTNee7QDmvasMGa_hvdNm4fRqOGZeDtenuxZyLscKdY0gbS1smYi3BqAPaXnrKQ52PlG-aAGLxQsVrk8sxuIjvg2nR_4LVuYc5a8zU65jNWWc0DOEQUq2cUrYvhaa-VvQZjU1jAC3lJ9Zy-9ucm_-BgBVePnz41JaSQMCpnY-X4AMjPtHK4M-QDi4CQqHlpaE"/>
+</a>
+</div>
+</div>
+</header>
+<main class="pt-12 pb-12 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Left Column: Profile Info -->
+<div class="md:col-span-4 space-y-lg">
+<!-- Main Profile Card -->
+<div class="bg-white border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex flex-col items-center text-center mb-lg">
+<div class="relative w-32 h-32 mb-md">
+<img alt="Luis Morales Profile" class="w-full h-full object-cover rounded-full border-4 border-primary-fixed shadow-md" data-alt="A focused studio portrait of a male professional barber named Luis Morales, dressed in a sophisticated dark uniform. He has a friendly yet authoritative expression. The lighting is crisp and clear, highlighting his professional demeanor against a clean, off-white background that complements a high-contrast corporate UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7fkZeV6Cbi7s3gVklLN1cc67dhbC69D9HOtN4YdgbswxjRQ-6HtSihPPhrx-C8mtwzk7azV5zi9jDwlKa6jut0_96KrJ7zZm9ES6V2k77CvKFjK4gEqoOPdOkut-L3MtsvKy0K1ztlLXh76sGtdApdIi4USVN_Aty1lipVeB3fx2q4VhwUGvyQFdEbqaJ-VlK2ZPT7duxcjF8BT_jPLuBPFkNa4Xw9Q0jEghjeg-p04mxDqWyKfmRpCLkgSLyHQ6Zw0PajeWhFs"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-xs rounded-full border-2 border-white shadow-sm hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary font-bold">Barbería Don Luis</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Gestión Profesional</p>
+</div>
+<div class="space-y-md border-t border-outline-variant pt-lg">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">person</span>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Nombre</p>
+<p class="font-label-lg text-label-lg">Luis Morales</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Correo</p>
+<p class="font-label-lg text-label-lg">luis.morales@ejemplo.com</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Teléfono</p>
+<p class="font-label-lg text-label-lg">+593 98 765 4321</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">badge</span>
+<div>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">RUC</p>
+<p class="font-label-lg text-label-lg">1712345678001</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SRI Bot Config -->
+<div class="bg-primary-container text-on-primary-container rounded-xl p-lg shadow-sm">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined">smart_toy</span>
+<h3 class="font-headline-sm text-headline-sm">Configuración del Bot</h3>
+</div>
+<div class="space-y-md">
+<div class="flex items-center justify-between p-sm bg-white/10 rounded-lg">
+<span class="font-label-lg text-label-lg">Recordatorios automáticos</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only custom-toggle" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-primary-fixed/30 rounded-full transition-colors duration-200"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-200"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-sm bg-white/10 rounded-lg">
+<span class="font-label-lg text-label-lg">Facturación SRI</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only custom-toggle" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-primary-fixed/30 rounded-full transition-colors duration-200"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-200"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Settings Sections -->
+<div class="md:col-span-8 space-y-lg">
+<!-- Business Hours Section -->
+<section class="bg-white border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex items-center gap-sm mb-lg border-b border-outline-variant pb-md">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Horario de Atención</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<script>
+                            const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+                            days.forEach((day, index) => {
+                                const checked = index < 6 ? 'checked' : '';
+                                document.write(`
+                                    <div class="flex items-center justify-between p-md border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors">
+                                        <div class="flex items-center gap-sm">
+                                            <span class="font-label-lg text-label-lg text-on-surface">${day}</span>
+                                        </div>
+                                        <div class="flex items-center gap-md">
+                                            <span class="text-xs text-on-surface-variant ${index === 6 ? 'hidden' : ''}">09:00 - 19:00</span>
+                                            <label class="relative inline-flex items-center cursor-pointer">
+                                                <input type="checkbox" class="sr-only custom-toggle" ${checked}>
+                                                <div class="toggle-bg w-10 h-5 bg-outline-variant rounded-full transition-colors duration-200"></div>
+                                                <div class="toggle-dot absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition-transform duration-200"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                `);
+                            });
+                        </script>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-white border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex items-center justify-between mb-lg border-b border-outline-variant pb-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">content_cut</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Servicios</h2>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-md py-xs rounded-lg font-label-lg text-label-lg hover:opacity-80 transition-all active:scale-95 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px]">add</span> Añadir Servicio
+                        </button>
+</div>
+<div class="space-y-sm">
+<!-- Corte Clásico -->
+<div class="flex items-center justify-between p-md bg-surface border border-outline-variant rounded-xl hover:border-primary transition-colors group">
+<div class="flex items-center gap-md">
+<div class="bg-primary-fixed w-12 h-12 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">content_cut</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Corte clásico</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">30 minutos • Tijera y máquina</p>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$12.00</span>
+<button class="text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Barba -->
+<div class="flex items-center justify-between p-md bg-surface border border-outline-variant rounded-xl hover:border-primary transition-colors group">
+<div class="flex items-center gap-md">
+<div class="bg-primary-fixed w-12 h-12 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">face</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Barba</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">20 minutos • Perfilado y toalla caliente</p>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$8.00</span>
+<button class="text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Combo -->
+<div class="flex items-center justify-between p-md bg-primary-fixed-dim/10 border border-primary-fixed rounded-xl hover:border-primary transition-colors group">
+<div class="flex items-center gap-md">
+<div class="bg-primary-container text-on-primary w-12 h-12 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<div class="flex items-center gap-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Combo</h4>
+<span class="bg-primary text-on-primary text-[10px] font-bold px-sm rounded-full uppercase">Popular</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">50 minutos • Corte + Barba completo</p>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$18.00</span>
+<button class="text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Footer -->
+<div class="flex justify-end gap-md">
+<button class="px-xl py-md border border-outline-variant rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-variant transition-colors">
+                        Descartar Cambios
+                    </button>
+<button class="px-xl py-md bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                        Guardar Perfil
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container flex justify-around items-center h-16 border-t border-outline-variant z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='index.html'">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-sm">Citas</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='dashboard.html'">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-sm">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='sri.html'">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-label-sm">SRI</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary" onclick="window.location.href='perfil.html'">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-label-sm">Perfil</span>
+</button>
+</nav>
+
+<script>
+        // Micro-interactions for toggles
+        document.querySelectorAll('.custom-toggle').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const parent = this.closest('.flex');
+                if (this.checked) {
+                    parent.classList.add('border-primary-container');
+                } else {
+                    parent.classList.remove('border-primary-container');
+                }
+            });
+        });
+
+        // Add a simple toast notification system for MOC interactivity
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-4 right-4 bg-inverse-surface text-inverse-on-surface px-lg py-md rounded-lg shadow-lg font-body-md z-50 transition-all transform translate-y-10 opacity-0';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 10);
+
+            // Animate out and remove
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Attach toast to interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const interactiveElements = document.querySelectorAll('button:not([onclick]), a:not([href="index.html"]):not([href="dashboard.html"]):not([href="sri.html"]):not([href="perfil.html"])');
+            interactiveElements.forEach(el => {
+                el.addEventListener('click', (e) => {
+                    // Prevent default link behavior for MOC if href is # or empty
+                    if (el.tagName === 'A') {
+                        const href = el.getAttribute('href');
+                        if (!href || href === '#') {
+                            e.preventDefault();
+                        } else {
+                            return; // allow navigation
+                        }
+                    }
+                    
+                    let actionName = el.textContent.trim().replace(/\s+/g, ' ');
+                    
+                    // If it contains a material icon, use that text instead
+                    const icon = el.querySelector('.material-symbols-outlined');
+                    if (icon) {
+                         const iconText = icon.textContent.trim();
+                         if (iconText === 'edit') actionName = 'Editar Foto';
+                         else if (iconText === 'add') actionName = 'Añadir Servicio';
+                         else if (iconText === 'more_vert') actionName = 'Opciones de Servicio';
+                         else if (iconText === 'notifications') actionName = 'Notificaciones';
+                         else if (iconText === 'settings') actionName = 'Configuración';
+                         else actionName = iconText;
+                    }
+                    
+                    if (!actionName) actionName = 'Acción';
+                    
+                    showToast(`Simulando: ${actionName}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
